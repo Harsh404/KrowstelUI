@@ -1,0 +1,32 @@
+.side-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 195px;
+    background-color: #374C63;
+    height: 100vh; /* Full height minus navbar */
+    margin-top: 26px; /* Place it below the navbar */
+}
+.side-bar-heading{
+  margin-left: 10px;
+}
+.side-bar-sub-head{
+  display: flex;
+  align-items: center;
+  gap: 2;
+  margin-left: 16px;
+ 
+}
+.side-bar-sub-head-icon{
+  font-weight: 600;
+  font-size: 25px;
+}
+.text-subhead{
+    color: #ffff;
+    font-size: 10px;
+    font-weight: 600;
+}
+h4{
+    color: #fff;
+    font-size: medium;
+}
