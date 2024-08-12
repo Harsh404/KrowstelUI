@@ -1,0 +1,46 @@
+.card-dashboard{
+    border: 2px  solid white;
+    width: 60%;
+    height: 348px;
+    top: 120px;
+    left: 230px;
+    gap: 0px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;  
+}
+.upper-card{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+
+}
+.upper-card-btn{
+    margin: 21px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.upper-card-head{
+    margin-left: 18px;
+}
+.btn-card{
+    border-radius: 10px;
+    height: 35px;
+    width: 93px;
+}
+h4{
+    font-size: 20px;
+}
+.folder-icon{
+    font-size: 10px;
+    
+}
+.lower-card{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+ 
