@@ -2,6 +2,7 @@ import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import CardDashboard from './components/CardDashboard';
 import Graph from './components/Graph';
 import JobForm from './components/JobForm';
+import MainContent from './components/MainContent/MainContent';
 import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
 
