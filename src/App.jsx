@@ -1,17 +1,31 @@
-import React from 'react';
-import "../src/App.css";
-import MainContent from './components/MainContent/MainContent';
-import NavBar from './components/Navbar/NavBar';
-import SideBar from './components/SideBar/SideBar';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import CardDashboard from './components/CardDashboard';
+import Graph from './components/Graph';
+import JobForm from './components/JobForm';
+import Navbar from './components/Navbar';
+import Sidebar from './components/Sidebar';
 
-function App() {
+export default function App() {
   return (
-    <div className='App'>
-      <SideBar />
-      <NavBar />
-      <MainContent/>
-    </div>
-  )
+    <Router>
+      <div className="container">
+        <div className="navbar">
+          <Navbar />
+        </div>
+        <div className="body">
+          <div className="sidebar">
+            <Sidebar />
+          </div>
+          <div className="dashboard">
+            <Routes>
+              <Route path="/main" element={<MainContent />} />
+              <Route path="/" element={<CardDashboard />} />
+              <Route path="/job-form" element={<JobForm />} />
+              <Route path="/graph" element={<Graph />} />
+            </Routes>
+          </div>
+        </div>
+      </div>
+    </Router>
+  );
 }
-
-export default App
