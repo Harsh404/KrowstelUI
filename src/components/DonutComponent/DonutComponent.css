@@ -1,22 +1,108 @@
-.donut-component{
-    border: 2px solid blue;
-    margin: 5px;
-    width: 40%;
+.donut-component {
+    /* border: 2px solid blue; */
     border-radius: 10px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 400px;
+    height: 400px;
+    /* Adjust as needed */
+    margin: 10px 10px;
+    overflow: hidden;
 
 }
-.left-arrow , .right-arrow{
-    height: 10px;
-    width: 10px;
-    font-size: 10px;
-    font-weight: 600;
-}
-.card-donut-com{
+.donut-heading{
     display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+    flex-direction: row;
+    justify-content: center;
 }
+.bottomData{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.left-arrow {
+    /* height: 17px;
+    width: 28px; */
+    font-size: 13px;
+    font-weight: 600;
+    /* padding: 10px 20px; */
+    cursor: pointer;
+    color: black;
+}
+
+.right-arrow {
+    /* height: 17px;
+    width: 28px; */
+    font-size: 13px;
+    font-weight: 600;
+    /* padding: 10px 20px; */
+    
+    color: black;
+}
+
+.card-donut-com {
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    height: 348px;
+    overflow: hidden;
+}
+
+/* .arrow {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    
+    
+} */
+button{
+    height: 20px;
+    width: 30px;
+    margin: 20px;
+    cursor: pointer;
+}
+.btnTwo{
+    position: fixed;
+    margin-left: 307px;
+}
+.btnOne{
+    position: fixed;
+    margin-right: 307px;
+}
+.doughNut{
+    height: 200px;
+    margin-left: 103px;
+    margin-top: 10px;
+    width: 200px;
+    text-align: center;
+}
+.donut-heading{
+    height: 15%;
+}
+.bottomData{
+    height: 30%;
+    margin-bottom: 10px;
+}
+.text{
+    display: inline-block;
+}
+.text-data{
+    padding: 3px;
+}
+.num-bullet{
+    list-style: none;
+}
+/* .donut-icon{
+    
+    border: 2px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 62px;
+   
+    width: 70%;
+    height: 86px;
+} */

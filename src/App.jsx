@@ -5,6 +5,7 @@ import JobForm from './components/JobForm';
 import MainContent from './components/MainContent/MainContent';
 import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
+import "./App.css"
 
 export default function App() {
   return (
@@ -19,8 +20,7 @@ export default function App() {
           </div>
           <div className="dashboard">
             <Routes>
-              <Route path="/main" element={<MainContent />} />
-              <Route path="/" element={<CardDashboard />} />
+              <Route path="/" element={<MainContent />} />
               <Route path="/job-form" element={<JobForm />} />
               <Route path="/graph" element={<Graph />} />
             </Routes>
