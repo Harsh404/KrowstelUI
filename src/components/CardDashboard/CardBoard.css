@@ -1,22 +1,23 @@
 .card-dashboard{
     border: 2px  solid white;
-    width: 70%;
-    height: 348px;
-    top: 120px;
-    left: 230px;
+    width: 60%;
+    height: 30%;
     gap: 0px;
     border-radius: 30px;
     display: flex;
     flex-direction: column;  
+    margin: 1rem 1rem 1rem 1rem;
 }
 .upper-card{
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+    width: 40rem;
+    height: 4rem;
 
 }
 .upper-card-btn{
-    margin: 21px;
+    margin: 0rem 1rem;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -28,19 +29,22 @@
     border-radius: 10px;
     height: 35px;
     width: 93px;
+    border: #C3D3E2;
 }
-h4{
+/* h4{
     font-size: 20px;
-}
+} */
 .folder-icon{
-    font-size: 10px;
+    font-size: 0.7rem;
     
 }
 .lower-card{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    width: 85%;
+    margin: 3rem 0.2rem 0.2rem 0.2rem;
 }
 
  

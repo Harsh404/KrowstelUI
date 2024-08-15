@@ -2,6 +2,7 @@ import React from 'react';
 import CardDashboard from '../CardDashboard/CardDashboard';
 import DonutComponent from '../DonutComponent/DonutComponent';
 import "../MainContent/MainContent.css";
+import LowerDonutComponent from '../LowerDonutComponent/LowerDonutComponent';
 function MainContent() {
     return (
         <div className='main-content'>
@@ -9,9 +10,7 @@ function MainContent() {
              <CardDashboard/>
              <DonutComponent/>
             </div>
-            <div className="main-content-lower">
-
-            </div>
+              <LowerDonutComponent/> 
         </div>
     )
 }

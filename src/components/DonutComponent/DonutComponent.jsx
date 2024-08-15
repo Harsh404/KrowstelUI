@@ -44,7 +44,7 @@ function DonutComponent() {
     const options = {
         plugins: {
             legend: {
-                position: 'bottom',
+                position: 'center',
                 labels: {
                     usePointStyle: false,
                     padding: 0,
@@ -92,16 +92,16 @@ function DonutComponent() {
             <div className="bottomData">
                 <div className="text">
                     <ul typeof='circle' className='text-data'>
-                    <li>LinkedIn</li>
-                    <li>Indeed</li>
-                    <li>Ambition-Box</li>
+                    <li className='donut-list-item'>LinkedIn</li>
+                    <li className='donut-list-item'>Indeed</li>
+                    <li className='donut-list-item'>Ambition-Box</li>
                     </ul>
                 </div>
                 <div className="bottomNum">
                     <ul className='num-bullet'>
-                    <li>{donutData[currentIndex].linkValue}%</li>
-                    <li>{donutData[currentIndex].indValue}%</li>
-                    <li>{donutData[currentIndex].ambiValue}%</li>
+                    <li className='donut-list-item'>{donutData[currentIndex].linkValue}%</li>
+                    <li className='donut-list-item'>{donutData[currentIndex].indValue}%</li>
+                    <li className='donut-list-item'>{donutData[currentIndex].ambiValue}%</li>
                     </ul>
                     
                 </div>

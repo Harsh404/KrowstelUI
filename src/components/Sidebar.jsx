@@ -1,27 +1,30 @@
-import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
-import '../components/styles/Sidebar.css';
-import { FaQuestionCircle, FaVideo } from 'react-icons/fa';
-import { MdDashboard, MdHistory, MdNavigateBefore, MdOutlineNavigateNext } from "react-icons/md";
-import { IoIosAddCircleOutline } from "react-icons/io";
-import { BsSuitcaseLg } from "react-icons/bs";
+import React from 'react';
 import { BiSolidBriefcaseAlt2 } from "react-icons/bi";
-import { IoPeopleSharp } from "react-icons/io5";
+import { BsSuitcaseLg } from "react-icons/bs";
+import { FaQuestionCircle, FaVideo } from 'react-icons/fa';
 import { GrDocumentText } from "react-icons/gr";
 import { HiOutlineCurrencyDollar, HiOutlineDocumentDuplicate } from "react-icons/hi";
+import { IoIosAddCircleOutline } from "react-icons/io";
+import { IoPeopleSharp } from "react-icons/io5";
+import { MdDashboard, MdHistory } from "react-icons/md";
+import { NavLink } from 'react-router-dom';
+import '../components/styles/Sidebar.css';
 
 const Sidebar = () => {
-  const [isCollapsed, setIsCollapsed] = useState(false);
+  // const [isCollapsed, setIsCollapsed] = useState(false);
 
-  const toggleSidebar = () => {
-    setIsCollapsed(!isCollapsed);
-  };
+  // const toggleSidebar = () => {
+  //   setIsCollapsed(!isCollapsed);
+  // };
 
   const menuItems = [
     {
       section: 'OVERVIEW',
       items: [
-        { label: 'Dashboard', icon: <MdDashboard />, path: '/dashboard' }
+        { label: 'Dashboard', 
+          icon: <MdDashboard />,
+           path: '/dashboard'
+         }
       ],
     },
     {
@@ -58,7 +61,7 @@ const Sidebar = () => {
 
   return (
     <div className="sidebar-wrapper">
-      <div className={`sidebar ${isCollapsed ? 'collapsed' : ''}`}>
+      <div className='sidebar'>
         <div className="sidebar-content">
           {menuItems.map((menu, index) => (
             <div className="sidebar-menu" key={index}>
@@ -72,16 +75,16 @@ const Sidebar = () => {
                     activeClassName="active"
                   >
                     {item.icon}
-                    {!isCollapsed && <span>{item.label}</span>}
+                    { <span>{item.label}</span>}
                   </NavLink>
                 ))}
               </div>
             </div>
           ))}
         </div>
-        <button className="toggle-button" onClick={toggleSidebar}>
+        {/* <button className="toggle-button" onClick={toggleSidebar}>
           {isCollapsed ? <MdOutlineNavigateNext /> : <MdNavigateBefore />}
-        </button>
+        </button> */}
       </div>
     </div>
   );

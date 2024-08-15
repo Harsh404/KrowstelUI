@@ -1,16 +1,15 @@
 .donut-component {
     /* border: 2px solid blue; */
-    border-radius: 10px;
-    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 1rem;
+    box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 400px;
-    height: 400px;
+    width: 28%;
+    height: 30%;
     /* Adjust as needed */
-    margin: 10px 10px;
+    margin: 2rem 0rem 0rem 0rem;
     overflow: hidden;
-
 }
 .donut-heading{
     display: flex;
@@ -25,7 +24,7 @@
 .left-arrow {
     /* height: 17px;
     width: 28px; */
-    font-size: 13px;
+    font-size: 0.8rem;
     font-weight: 600;
     /* padding: 10px 20px; */
     cursor: pointer;
@@ -35,29 +34,12 @@
 .right-arrow {
     /* height: 17px;
     width: 28px; */
-    font-size: 13px;
+    font-size: 0.8rem;
     font-weight: 600;
     /* padding: 10px 20px; */
     
     color: black;
 }
-
-.card-donut-com {
-    width: 100%;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-    height: 348px;
-    overflow: hidden;
-}
-
-/* .arrow {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    
-    
-} */
 button{
     height: 20px;
     width: 30px;
@@ -73,10 +55,9 @@ button{
     margin-right: 307px;
 }
 .doughNut{
-    height: 200px;
-    margin-left: 103px;
-    margin-top: 10px;
-    width: 200px;
+    height: 9rem;
+    margin-left: 7rem;
+    width: 9rem;
     text-align: center;
 }
 .donut-heading{
@@ -95,6 +76,11 @@ button{
 .num-bullet{
     list-style: none;
 }
+.donut-list-item{
+    margin: 0rem 0rem 1rem 0rem;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
 /* .donut-icon{
     
     border: 2px solid red;
@@ -106,3 +92,10 @@ button{
     width: 70%;
     height: 86px;
 } */
+
+@media(max-width:1535px) , (width : 1535px){
+    .donut-component{
+        width: 34%;
+        height: 30%;
+    }
+}
