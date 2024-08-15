@@ -6,13 +6,14 @@ import '../components/styles/JobForm.css';
 
 export default function JobForm() {
 
-  const [title, setTtile] = useState("");
-  const [department, setDepartment] = useState("");
-  const [industry, setIndustry] = useState("");
-  const [location, setLocation] = useState("");
-  const [description, setDescription] = useState("");
-  const [error, setErrror] = useState("");
-
+  const [jobDetails, setJobDetails] = useState({
+    title: "",
+    department: "",
+    industry: "",
+    location: "",
+    description: ""
+  });
+  
   //  Patterns
 
   const titlePattern = /^[a-zA-Z]+$/;
@@ -21,46 +22,77 @@ export default function JobForm() {
   const locationPattern = /^[ A-Za-z0-9_@./#&+-]*$/;
   const descriptionPattern = /^[a-zA-Z]+$/;
 
+  function handleOnChange(e) {
+    const target = e.target;
 
-  function handleOnChangeTitle(e) {
-    setTtile(e.target.value)
+    const name = target.name;
+    const value = target.value;
+
+    setJobDetails({
+      ...jobDetails,
+      [name]: value
+    });
   }
 
-  function handleOnChangeDepartment(e) {
-    setDepartment(e.target.value);
+  function checkErrorSections(e){
+    
+
+    if(!titlePattern.test(jobDetails.title)){
+      toast.error('Check your Title section !')
+      return false
+    } 
+    else if(!departmentPattern.test(jobDetails.department)){
+      toast.error('Check your Department section !')
+      return false
+    }
+    else if(!industryPattern.test(jobDetails.industry)){
+      toast.error('Check your Industry section !')
+      return false
+    }
+    else if(!locationPattern.test(jobDetails.location)){
+      toast.error('Check your Location section !')
+      return false
+    }
+    else if(!descriptionPattern.test(jobDetails.description)){
+      toast.error('Check your Description section !')
+      return false
+    }
+    return true;
+
   }
 
-  function handleOnChangeIndustry(e) {
-    setIndustry(e.target.value);
-  }
+  function checkEmptySections(){
+    if(jobDetails.title===""){
+      toast.warn("Title section can't be empty")
+      return false
+    }
 
-  function handleOnChangeLocation(e) {
-    setLocation(e.target.value);
-  }
+    else if(jobDetails.department===""){
+      toast.warn("Department section can't be empty")
+      return false
+    }
+    else if(jobDetails.industry===""){
+      toast.warn("Industry section can't be empty")
+      return false
+    }
+    else if(jobDetails.location===""){
+      toast.warn("Location section can't be empty")
+      return false
+    }
+    else if(jobDetails.description===""){
+      toast.warn("Description section can't be empty")
+      return false
+    }
+      return true;
 
-  function handleOnChangeDescription(e) {
-    setDescription(e.target.value);
   }
 
   function handleSubmit(e) {
     e.preventDefault();
+    if(checkEmptySections() && checkErrorSections()){
+      // TODO Add submit function
+    }
 
-    if(title==="" || !titlePattern.test(title)){
-      toast.error('Check your Title section !');
-      // console.log("Check your title again")
-    }
-    if(department==="" || !departmentPattern.test(department)){
-      toast.error('Check your Department section !')
-    }
-    if(industry==="" || !industryPattern.test(industry)){
-      toast.error('Check your Industry section !');
-    }
-    if(location==="" || !locationPattern.test(location)){
-      toast.error('Check your Location section !');
-    }
-    if(description==="" || !descriptionPattern.test(description)){
-      toast.error('Check your Description section !');
-    }
   }
 
 
@@ -77,21 +109,21 @@ export default function JobForm() {
           <div className="job-form-row">
             <div className="job-form-column">
               <label className="job-form-label">Job Title</label>
-              <input type="text" onChange={handleOnChangeTitle} name='title' placeholder='Type here...' className="job-form-input" />
+              <input type="text" onChange={handleOnChange} name='title' placeholder='Type here...' className="job-form-input" />
             </div>
             <div className="job-form-column">
               <label className="job-form-label">Department</label>
-              <input type="text" onChange={handleOnChangeDepartment} name='department' placeholder='Type here....' className="job-form-input" />
+              <input type="text" onChange={handleOnChange} name='department' placeholder='Type here....' className="job-form-input" />
             </div>
           </div>
           <div className="job-form-row">
             <div className="job-form-column">
               <label className="job-form-label">Industry</label>
-              <input type="text" onChange={handleOnChangeIndustry} name='industry' placeholder='Type here....' className="job-form-input" />
+              <input type="text" onChange={handleOnChange} name='industry' placeholder='Type here....' className="job-form-input" />
             </div>
             <div className="job-form-column">
               <label className="job-form-label">Location</label>
-              <input type="text" onChange={handleOnChangeLocation} name='location' placeholder='Type here....' className="job-form-input" />
+              <input type="text" onChange={handleOnChange} name='location' placeholder='Type here....' className="job-form-input" />
             </div>
           </div>
           <div className="job-form-row">
@@ -122,7 +154,7 @@ export default function JobForm() {
           </div>
           <div className="job-form-column">
             <label className="job-form-label">Description</label>
-            <textarea className="job-form-textarea" onChange={handleOnChangeDescription} name='' placeholder='Type here....' />
+            <textarea className="job-form-textarea" onChange={handleOnChange} name='description' placeholder='Type here....' />
           </div>
           <div className="job-form-button-group">
             <button className="job-form-cancel-button">Cancel</button>
