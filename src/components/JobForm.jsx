@@ -6,6 +6,34 @@ import '../components/styles/JobForm.css';
 
 export default function JobForm() {
 
+  function colGenrator(e1){
+    return(
+      <div className='job-form-column'>
+        <label className='job-form-label'>{e1.label}</label>
+        <input type="text" onChange={handleOnChange} name={e1.name} placeholder='Type here...' className="job-form-input" />
+      </div>
+    )
+  }
+  function rowGenrator(r1,r2){
+    return(<div className='job-form-row'>
+      {colGenrator(r1)}
+      {colGenrator(r2)}
+      </div>)   
+  }
+
+  // function formFields(field1, field2){
+  //   return(<div className='job-form-row'>
+  //     {/* <div className='job-form-column'>
+  //       <label className="job-form-label">{field1.label}</label>
+  //       <input type="text" onChange={handleOnChange} name={field1.name} placeholder='Type here...' className="job-form-input" />
+  //     </div>
+  //     <div className='job-form-column'>
+  //       <label className="job-form-label">{field2.label}</label>
+  //       <input type="text" onChange={handleOnChange} name={field2.name} placeholder='Type here...' className="job-form-input" /> */}
+  //     </div>
+  //   </div>)
+  // }
+
   const [jobDetails, setJobDetails] = useState({
     title: "",
     department: "",
@@ -22,8 +50,8 @@ export default function JobForm() {
   const locationPattern = /^[ A-Za-z0-9_@./#&+-]*$/;
   const descriptionPattern = /^[a-zA-Z]+$/;
 
-  function handleOnChange(e) {
-    const target = e.target;
+  function handleOnChange(event) {
+    const target = event.target;
 
     const name = target.name;
     const value = target.value;
@@ -34,7 +62,7 @@ export default function JobForm() {
     });
   }
 
-  function checkErrorSections(e){
+  function checkErrorSections(event){
     
 
     if(!titlePattern.test(jobDetails.title)){
@@ -87,14 +115,13 @@ export default function JobForm() {
 
   }
 
-  function handleSubmit(e) {
-    e.preventDefault();
+  function handleSubmit(event) {
+    event.preventDefault();
     if(checkEmptySections() && checkErrorSections()){
       // TODO Add submit function
     }
 
   }
-
 
   return (
     <div className="job-form-container">
@@ -106,26 +133,23 @@ export default function JobForm() {
       </div>
       <form onSubmit={handleSubmit}>
         <div className="job-form">
-          <div className="job-form-row">
-            <div className="job-form-column">
-              <label className="job-form-label">Job Title</label>
-              <input type="text" onChange={handleOnChange} name='title' placeholder='Type here...' className="job-form-input" />
-            </div>
-            <div className="job-form-column">
-              <label className="job-form-label">Department</label>
-              <input type="text" onChange={handleOnChange} name='department' placeholder='Type here....' className="job-form-input" />
-            </div>
-          </div>
-          <div className="job-form-row">
-            <div className="job-form-column">
-              <label className="job-form-label">Industry</label>
-              <input type="text" onChange={handleOnChange} name='industry' placeholder='Type here....' className="job-form-input" />
-            </div>
-            <div className="job-form-column">
-              <label className="job-form-label">Location</label>
-              <input type="text" onChange={handleOnChange} name='location' placeholder='Type here....' className="job-form-input" />
-            </div>
-          </div>
+          {rowGenrator(
+            {label: "Job title", name: "title"},
+            {label: "Department", name: "department"}
+          )}
+          {rowGenrator(
+            {label: "Industry", name: "industry"},
+            {label: "Location", name: "location"}
+          )}
+
+          {/* {formFields(
+            {label:"Job title", name: "title"},
+            {label:"Department", name: "department"}
+          )}
+           {formFields(
+            {label:"Industry", name: "industry"},
+            {label:"Location", name: "location"}
+          )} */}
           <div className="job-form-row">
             <div className="job-form-column">
               <label className="job-form-label">Relevant Experience Required</label>
