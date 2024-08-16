@@ -1,22 +1,101 @@
-.donut-component{
-    border: 2px solid blue;
-    margin: 5px;
-    width: 40%;
-    border-radius: 10px;
+.donut-component {
+    /* border: 2px solid blue; */
+    border-radius: 1rem;
+    box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.3);
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28%;
+    height: 30%;
+    /* Adjust as needed */
+    margin: 2rem 0rem 0rem 0rem;
+    overflow: hidden;
+}
+.donut-heading{
+    display: flex;
+    flex-direction: row;
     justify-content: center;
-
 }
-.left-arrow , .right-arrow{
-    height: 10px;
-    width: 10px;
-    font-size: 10px;
-    font-weight: 600;
-}
-.card-donut-com{
+.bottomData{
     display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.left-arrow {
+    /* height: 17px;
+    width: 28px; */
+    font-size: 0.8rem;
+    font-weight: 600;
+    /* padding: 10px 20px; */
+    cursor: pointer;
+    color: black;
+}
+
+.right-arrow {
+    /* height: 17px;
+    width: 28px; */
+    font-size: 0.8rem;
+    font-weight: 600;
+    /* padding: 10px 20px; */
+    
+    color: black;
+}
+button{
+    height: 20px;
+    width: 30px;
+    margin: 20px;
+    cursor: pointer;
+}
+.btnTwo{
+    position: fixed;
+    margin-left: 307px;
+}
+.btnOne{
+    position: fixed;
+    margin-right: 307px;
+}
+.doughNut{
+    height: 9rem;
+    margin-left: 7rem;
+    width: 9rem;
+    text-align: center;
+}
+.donut-heading{
+    height: 15%;
+}
+.bottomData{
+    height: 30%;
+    margin-bottom: 10px;
+}
+.text{
+    display: inline-block;
+}
+.text-data{
+    padding: 3px;
+}
+.num-bullet{
+    list-style: none;
+}
+.donut-list-item{
+    margin: 0rem 0rem 1rem 0rem;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+/* .donut-icon{
+    
+    border: 2px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 62px;
+   
+    width: 70%;
+    height: 86px;
+} */
+
+@media(max-width:1535px) , (width : 1535px){
+    .donut-component{
+        width: 34%;
+        height: 30%;
+    }
 }

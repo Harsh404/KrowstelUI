@@ -1,5 +1,5 @@
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
-import CardDashboard from './components/CardDashboard';
+import "./App.css";
 import Graph from './components/Graph';
 import JobForm from './components/JobForm';
 import MainContent from './components/MainContent/MainContent';
@@ -16,11 +16,11 @@ export default function App() {
         <div className="body">
           <div className="sidebar">
             <Sidebar />
+            {/* <button onClick={toggleSidebar}>TogSide</button> */}
           </div>
           <div className="dashboard">
             <Routes>
-              <Route path="/main" element={<MainContent />} />
-              <Route path="/" element={<CardDashboard />} />
+              <Route path="/" element={<MainContent />} />
               <Route path="/job-form" element={<JobForm />} />
               <Route path="/graph" element={<Graph />} />
             </Routes>

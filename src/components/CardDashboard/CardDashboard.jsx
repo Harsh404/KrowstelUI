@@ -52,7 +52,7 @@ function CardDashboard() {
         </div>
         <div className="upper-card-btn">
           <button className="btn-card">
-            <span><MdDriveFolderUpload className='folder-icon' /></span>Export</button>
+            <span><MdDriveFolderUpload className='folder-icon' /></span>  Export</button>
         </div>
       </div>
       {/* Upper Part end */}

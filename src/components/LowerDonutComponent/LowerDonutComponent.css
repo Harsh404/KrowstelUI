@@ -1,0 +1,33 @@
+.doughnut{
+
+    height: 20%;
+    margin-left: 103px;
+    width: 50%;
+    text-align: center;
+    position: absolute;
+    top: 28rem;
+}
+.lower-donut-heading{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.lower-donut-icon{
+    margin-left: 20rem;
+    height: 12rem;
+    width: 12rem;
+}
+.btn-donut{
+    width: 8rem;
+    height: 2rem;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+@media(max-width:1535px), (width : 1535px){
+    .doughnut{
+        position: absolute;
+        top: 27rem;
+        left: 42rem;
+    }
+  
+}

@@ -23,34 +23,34 @@ const CardComponent = ({ icon: Icon, number, text, smalltext, bgColor, iconBgCol
 
 const styles = {
   card: {
-    width: '180px',
-    height: '211px',
-    margin: '36px 0px 12px 5px',
+    width: '35%',
+    height: '5%',
+    // margin: '20px 0px 10px 5px',
     borderRadius: '10px',
     display: 'flex',
-    flexDirection: 'column'
-
+    flexDirection: 'column',
+    margin: '0.5rem 0.5rem',
   },
   iconContainer: {
     height: '25px',
     width: '25px',
-    margin: '18px 12px',
-    padding: '10px',
+    margin: '1rem',
+    padding: '0.2rem',
     borderRadius: '50%',
   },
   icon: {
-    height: '24px',
-    width: '24px',
+    height: '20px',
+    width: '20px',
     color: '#fff',
-
+    margin:'0.2rem'
   },
   textContainer: {
     display: 'flex',
     flexDirection: 'column',
-    margin: '10px 10px'
+    margin: '0rem 0rem 0.4rem 0.4rem'
   },
   number: {
-    fontSize: '24px',
+    fontSize: '22px',
     fontWeight: 'bold',
     padding: '6px'
   },
