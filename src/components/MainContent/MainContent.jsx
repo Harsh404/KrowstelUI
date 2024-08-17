@@ -6,12 +6,18 @@ import LowerDonutComponent from '../LowerDonutComponent/LowerDonutComponent';
 function MainContent() {
     return (
         <div className='main-content'>
-            <div className="main-content-upper">
+            <div className="main-cardboard">
              <CardDashboard/>
+             </div>
+             <div className="graph">
              <DonutComponent/>
+             </div>
+             <div className="application">
+
+             </div>
             </div>
-              <LowerDonutComponent/> 
-        </div>
+            //   {/* <LowerDonutComponent/>  */}
+      
     )
 }
 

@@ -1,0 +1,8 @@
+.slider-container{
+    position: absolute;
+    top: 6vw;
+    right: 31vh;
+    z-index: 999;
+    background-color: #fff;
+    width: 6vw;
+}

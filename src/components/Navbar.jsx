@@ -1,61 +1,56 @@
-import React from 'react'
-import '../components/styles/Navbar.css'
-import QuestionAnswerIcon from '@mui/icons-material/QuestionAnswer';
-import NotificationsIcon from '@mui/icons-material/Notifications';
-import SettingsIcon from '@mui/icons-material/Settings';
+
+import { MdQuestionAnswer } from "react-icons/md";
+import { IoIosNotifications, IoMdSettings } from "react-icons/io";
+import React from 'react';
+import '../components/styles/Navbar.css';
+import HamBurger from "./HamBurger/HamBurger";
 
 export default function Navbar() {
-  return (
-    <div className='navbar'>
-        <div className='logo'>
-            <img src='./images/logo.svg'></img>
-        </div>
-        <div className='toolbar'>
-            <div className='searchbar'>
+
+    return (
+        <div className='navbar'>
+            <div className='logo'>
+                <img src='./images/logo.svg'></img>
+            </div>
+            <div className="res-container">
+            <div class="search-box-res">
+                    <input type="text" placeholder="Search for something" id="searchInput" />
+                </div>
+            <div className="nav-hamburger" >
+                    <HamBurger />
+                </div>
+                </div>
+            <div className='toolbar'>
+              
                 <div class="search-box">
-                    <input type="text" placeholder="Search for something" id="searchInput"/>
+                    <input type="text" placeholder="Search for something" id="searchInput" />
+                </div>
+                <div className="iconbar">
+                    <div className='icons'>
+                        <a className='icon-link'>
+                            <MdQuestionAnswer className="icon-image-ques" />
+                        </a>
+                    </div>
+                    <div className='icons'>
+                        <a className='btn-icon'>
+                            <IoIosNotifications className="icon-image" />
+                        </a>
+                    </div>
+
+                    <div className='icons'>
+                        <a className='btn-icon'>
+                            <IoMdSettings className="icon-image" />
+                        </a>
+                    </div>
+
+                    <div className='profile-img'>
+                        <img id='dp' src='./images/dp.png' />
+                    </div>
                 </div>
             </div>
-            <div className="iconbar">
-                <div className='msg-icon'>
-                    <a id='msg-btn'>
-                        <QuestionAnswerIcon sx={{
-                            color:'#718EBF',
-                            fontSize:20,
-                            marginTop:1.5
-                        }}/>
-                    </a>       
-                </div>
-                <div className='noti-icon'>
-                    <a id='noti-btn'>
-                        <NotificationsIcon sx={{
-                            color:'#718EBF',
-                            fontSize:20,
-                            marginTop:1.5,
-                            marginLeft:1.4,
-                        }}/>
-                    </a>       
-                </div>
 
-                <div className='setting-icon'>
-                    <a id='setting-btn'>
-                        <SettingsIcon sx={{
-                            color:'#718EBF',
-                            fontSize:20,
-                            marginTop:1.3,
-                            marginLeft:1.3
-                        }}/>
-                    </a>       
-                </div>
 
-                <div className='profile-img'>
-                    <img id='dp' src='./images/dp.png'/>
-                </div>
-            </div>
+
         </div>
-    
-
-      
-    </div>
-  )
+    )
 }
