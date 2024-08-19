@@ -14,10 +14,9 @@ export default function App() {
           <Navbar />
         </div>
         <div className="body">
-          <div className="sidebar">
+          {/* <div className="sidebar">
             <Sidebar />
-            {/* <button onClick={toggleSidebar}>TogSide</button> */}
-          </div>
+          </div> */}
           <div className="dashboard">
             <Routes>
               <Route path="/" element={<MainContent />} />

@@ -4,12 +4,12 @@ import '../components/styles/JobForm.css';
 export default function JobForm() {
   return (
     <div className="job-form-container">
-      <h1 className="job-form-heading">Post a Job</h1>
-      <div className='jobform--auto-btn'>
-        <button id='autofill-btn'>
-          Autofill
-        </button>
+      <div className="heading">
+        <h1 className="job-form-heading">Post a Job</h1>
       </div>
+      <button id='autofill-btn'>
+        Autofill
+      </button>
       <div className="job-form">
         <div className="job-form-row">
           <div className="job-form-column">
@@ -50,19 +50,38 @@ export default function JobForm() {
           <div className="job-form-column">
             <label className="job-form-label">Salary Range</label>
             <div className="job-form-salary-wrapper">
-              <input type="number" id='quantity' name='quantity' className="job-form-salary-input" placeholder="Min" />
-              <span className="job-form-salary-label">LPA</span>
-              <input type="text" className="job-form-salary-input" placeholder="Max" />
-              <span className="job-form-salary-label">LPA</span>
+              <div className='job-form-salary-wrapper-cont-1'>
+                <div className="salary-input-cont1">
+                  <div className="salary-input">
+                    <input type="number" id='quantity' name='quantity' className="job-form-salary-input" placeholder="Min" />
+                  </div>
+                </div>
+                {/* <div className="salary-input-cont2">
+                  <div className="salary-input">
+                    <input type="number" id='quantity' name='quantity' className="job-form-salary-input" placeholder="Min" />
+                  </div> */}
+                <div className="salary-input-lpa1">
+                  LPA
+                </div>   
+              </div>
+              <div className="job-form-salary-wrapper-cont-2">
+                <div className="salary-input-cont2">
+                  <input type="number" id='quantity' name='quantity' className="job-form-salary-input" placeholder="Min" />
+                </div>
+                <div className="salary-input-lpa">
+                  LPA
+                </div>
+              </div>  
             </div>
           </div>
         </div>
-        <div className="job-form-column">
+        <div className="job-form-description">
           <label className="job-form-label">Description</label>
           <textarea className="job-form-textarea" placeholder='Type here....'/>
         </div>
         <div className="job-form-button-group">
           <button className="job-form-cancel-button">Cancel</button>
+          <button className="job-form-cancel-button">Draft</button>
           <button className="job-form-preview-button" type='submit'>Job Preview</button>
         </div>
       </div>
